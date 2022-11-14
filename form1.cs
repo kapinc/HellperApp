@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class form1 : MonoBehaviour
-{
-    public GameObject ShowText;
-
-
-    public InputField Food;
-
-    public Text ShowFood;
-    public Text Foodtext;
-
-    public void AddText()
+public class test : MonoBehaviour {
+    void Start ()
     {
+        var input = gameObject.GetComponent<InputField>();
+        var se= new InputField.SubmitEvent();
+        se.AddListener(SubmitName);
+        input.onEndEdit = se;
 
+        //or simply use the line below, 
+        //input.onEndEdit.AddListener(SubmitName);  // This also works
     }
-    
-    public void Edit()
+
+    private void SubmitName(string arg0)
     {
-        Foodtext.text = ShowFood.text;
-        
+        Debug.Log(arg0);
     }
 }
