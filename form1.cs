@@ -5,16 +5,22 @@ using UnityEngine.UI;
 
 public class form1 : MonoBehaviour
 {
-    public form1()
-    {
-        InitializeComponent();
-    }
+    public GameObject ShowText;
 
-    public void btnClick_Click()
+
+    public InputField Food;
+
+    public Text ShowFood;
+    public Text Foodtext;
+
+    public void AddText()
     {
-        string f = txtfirst.Text;
+
+    }
+    
+    public void Edit()
+    {
+        Foodtext.text = ShowFood.text;
         
-        IbiOutput.Text = f;
     }
-
 }
