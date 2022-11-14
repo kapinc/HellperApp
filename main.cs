@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class main : MonoBehaviour
 {
-   public void PluseMenuPan()
+    public GameObject PlusePan;
+    
+
+    public void OpenPluseMenuPan()
     {
         PlusePan.SetActive(!PlusePan.activeSelf);
     }  
 
+    
 }
