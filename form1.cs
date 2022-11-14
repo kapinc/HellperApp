@@ -10,7 +10,7 @@ public class form1 : MonoBehaviour
         InitializeComponent();
     }
 
-    private void btnClick_Click()
+    public void btnClick_Click()
     {
         string f = txtfirst.Text;
         
