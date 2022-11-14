@@ -5,6 +5,9 @@ using UnityEngine;
 public class main : MonoBehaviour
 {
     public GameObject PlusePan;
+    public GameObject AddButton;
+
+    public int[] NamePred;
     
 
     public void OpenPluseMenuPan()
@@ -12,5 +15,9 @@ public class main : MonoBehaviour
         PlusePan.SetActive(!PlusePan.activeSelf);
     }  
 
+    public void AddButtonButton()
+    {
+        PlusePan.SetActive(!PlusePan.activeSelf);
+    }  
     
 }
