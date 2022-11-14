@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class test : MonoBehaviour {
-    void Start ()
+    public void Start ()
     {
         var input = gameObject.GetComponent<InputField>();
         var se= new InputField.SubmitEvent();
