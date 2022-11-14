@@ -29,7 +29,6 @@ public class StartSkript : MonoBehaviour
         CompliteUser = PlayerPrefs.GetInt("CompliteUser");
         if(CompliteUser >= 1)
         {
-            MenuPan.SetActive(!MenuPan.activeSelf);
             OsnovaPan.SetActive(!OsnovaPan.activeSelf);
             ProgramPan.SetActive(!ProgramPan.activeSelf);
         }
