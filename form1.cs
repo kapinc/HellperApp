@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class test : MonoBehaviour {
-    public void Start ()
-    {
-        var input = gameObject.GetComponent<InputField>();
-        var se= new InputField.SubmitEvent();
-        se.AddListener(SubmitName);
-        input.onEndEdit = se;
+public class form1 : MonoBehaviour 
+{
+    [SerializeField] InputField field;
+    public string input_text;
+    public Text gg;
 
-        //or simply use the line below, 
-        //input.onEndEdit.AddListener(SubmitName);  // This also works
-    }
-
-    private void SubmitName(string arg0)
+    public void SaveName()
     {
-        Debug.Log(arg0);
+    input_text = field.text;
+    gg.text = field.text; 
     }
 }
