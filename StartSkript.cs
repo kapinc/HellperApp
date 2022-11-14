@@ -16,6 +16,7 @@ public class StartSkript : MonoBehaviour
     public GameObject ShortPan;
     public GameObject OsnovaPan;
     public GameObject ProgramPan;
+    public GameObject NotLogin;
 
     [SerializeField] int CompliteUser = 0;
 
@@ -25,7 +26,13 @@ public class StartSkript : MonoBehaviour
     {
         ConfigManager.FetchConfigs(new userAttributes(), new appAttributes());
         ConfigManager.FetchCompleted += Load;
-        PlayerPrefs.GetInt("CompliteUser", CompliteUser);
+        CompliteUser = PlayerPrefs.GetInt("CompliteUser");
+        if(CompliteUser >= 1)
+        {
+            MenuPan.SetActive(!MenuPan.activeSelf);
+            OsnovaPan.SetActive(!OsnovaPan.activeSelf);
+            ProgramPan.SetActive(!ProgramPan.activeSelf);
+        }
     }
 
     private void Load(ConfigResponse response)
