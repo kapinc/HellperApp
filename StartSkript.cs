@@ -17,12 +17,15 @@ public class StartSkript : MonoBehaviour
     public GameObject OsnovaPan;
     public GameObject ProgramPan;
 
+    [SerializeField] int CompliteUser = 0;
+
     public InputField InputFieldPromocod;
 
     private void Start()
     {
         ConfigManager.FetchConfigs(new userAttributes(), new appAttributes());
         ConfigManager.FetchCompleted += Load;
+        PlayerPrefs.GetInt("CompliteUser", CompliteUser);
     }
 
     private void Load(ConfigResponse response)
@@ -64,5 +67,7 @@ public class StartSkript : MonoBehaviour
         MenuPan.SetActive(!MenuPan.activeSelf);
         OsnovaPan.SetActive(!OsnovaPan.activeSelf);
         ProgramPan.SetActive(!ProgramPan.activeSelf);
+        CompliteUser++;
+        PlayerPrefs.SetInt("CompliteUser", CompliteUser);
     }
 }
