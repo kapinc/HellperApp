@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class Save : MonoBehaviour
+public class Savee : MonoBehaviour
 {
     private Save sv = new Save(); // добавили сейв короче
 
