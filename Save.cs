@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sve : MonoBehaviour
+public class Save : MonoBehaviour
 {
 
 }
